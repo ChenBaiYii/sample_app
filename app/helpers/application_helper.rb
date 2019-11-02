@@ -6,8 +6,8 @@ module ApplicationHelper
     else
       page_title += base_title
     end
-    x = "1"
-    y = ''
+
+
   end
 
 end
