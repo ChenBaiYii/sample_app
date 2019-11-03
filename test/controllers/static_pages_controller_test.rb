@@ -23,7 +23,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test 'should get about' do
     get static_pages_about_url
     assert_response :success
-    assert_select 'title', "About | #{@base_title}"
+    assert_select 'title', 'Ruby on Rails'
   end
 
   test 'should get contact' do
