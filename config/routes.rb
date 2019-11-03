@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   # user
   get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+
+  resources :users # 允许资源被路由访问
 
 end
