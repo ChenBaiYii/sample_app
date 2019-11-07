@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   get 'users/new'
 
   get 'static_pages/home'
@@ -12,5 +14,11 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
 
   resources :users # 允许资源被路由访问
+
+
+  # get 'sessions/new' # sessions 不应该使用路由
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
 end
